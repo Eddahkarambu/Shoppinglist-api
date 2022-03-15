@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shoppinglistitems",
+  "info": {
+    "singularName": "shoppinglistitem",
+    "pluralName": "shoppinglistitems",
+    "displayName": "shoppinglistitem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}
