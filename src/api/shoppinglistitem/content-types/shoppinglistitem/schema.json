@@ -4,7 +4,8 @@
   "info": {
     "singularName": "shoppinglistitem",
     "pluralName": "shoppinglistitems",
-    "displayName": "shoppinglistitem"
+    "displayName": "shoppinglistitem",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,12 @@
     },
     "quantity": {
       "type": "integer"
+    },
+    "shoppinglist_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::shoppinglist.shoppinglist",
+      "inversedBy": "shoppinglistitems"
     }
   }
 }

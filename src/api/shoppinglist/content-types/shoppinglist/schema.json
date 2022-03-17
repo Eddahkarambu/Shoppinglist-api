@@ -4,7 +4,8 @@
   "info": {
     "singularName": "shoppinglist",
     "pluralName": "shoppinglists",
-    "displayName": "shoppinglist"
+    "displayName": "shoppinglist",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,18 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "shoppinglists"
+    },
+    "shoppinglistitems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shoppinglistitem.shoppinglistitem",
+      "mappedBy": "shoppinglist_id"
     }
   }
 }
