@@ -19,12 +19,6 @@
     },
     "quantity": {
       "type": "integer"
-    },
-    "shoppinglist_id": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::shoppinglist.shoppinglist",
-      "inversedBy": "shoppinglistitems"
     }
   }
 }
