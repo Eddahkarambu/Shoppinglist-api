@@ -17,16 +17,17 @@
       "required": true,
       "unique": true
     },
-    "users_permissions_user": {
+    "shoppinglistitem": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shoppinglistitem.shoppinglistitem",
+      "mappedBy": "shoppinglist"
+    },
+    "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "shoppinglists"
-    },
-    "shoppinglistitems": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::shoppinglistitem.shoppinglistitem"
     }
   }
 }
